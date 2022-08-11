@@ -28,7 +28,14 @@
 //  2- The first letter of the firstName and lastName should be capital letter
 
 const objLit = (obj) => {
-  // write your code here
+  let firstName=obj.firstName
+  let first=firstName.charAt(0).toUpperCase() + firstName.slice(1)
+
+  let lastName=obj.lastName
+  let last=lastName.charAt(0).toUpperCase() + lastName.slice(1)
+
+  let text =`my name is ${first} ${last} I am ${obj.age} YO, and I love ${obj.hobby}.`
+  return text
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -51,7 +58,12 @@ const objLit = (obj) => {
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  // write your code here
+  let arr=Object.keys(obj)
+  let arrayData=[]
+  for (let i = 0; i < arr.length; i++) {
+    arrayData.push(`Customer Name :${arr[i]} , Age :${obj[arr[i]]}`)
+  }
+  return arrayData
 };
 // -------------------------------------------------------------------------------------------------------
 
